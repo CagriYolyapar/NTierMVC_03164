@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-    public class Editor:BaseEntity
+    public class Tag:BaseEntity
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Title { get; set; }
 
         //Relational Properties
-        public virtual List<Article> Articles { get; set; }
-
+        public virtual List<ArticleTag> ArticleTags { get; set; }
 
     }
 }
