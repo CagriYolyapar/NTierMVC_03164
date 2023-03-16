@@ -1,0 +1,22 @@
+﻿@model AddUpdateCategoryPageVM
+
+
+@{
+    ViewBag.Title = "UpdateCategory";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x=>x.Category.ID) @*BUrada post işleminde tekrar geri gönderebilmek icin ID verisini aslında Form icinde saklıyoruz...*@
+    <div>
+        @Html.TextBoxFor(x => x.Category.CategoryName)
+    </div>
+
+    <div>
+        @Html.TextBoxFor(x => x.Category.Description)
+    </div>
+    <div>
+        <button class="btn btn-success">Güncelle</button>
+    </div>
+}
+
